@@ -1,0 +1,53 @@
+[gd_scene load_steps=8 format=3 uid="uid://yqf7lw5n7fub"]
+
+[ext_resource type="Texture2D" uid="uid://dscmk62dk2k62" path="res://Assets/TileMap Textures/ProtoTextures2.png" id="1_dng4t"]
+[ext_resource type="PackedScene" uid="uid://c0qkwsrvofdyu" path="res://Scenes/Player.tscn" id="1_pbiu3"]
+[ext_resource type="Script" path="res://colllisionTest.gd" id="2_xecnb"]
+[ext_resource type="Texture2D" uid="uid://c5qw8fd0x1ww5" path="res://Assets/CharacterBox.png" id="3_x17ti"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mcgfo"]
+texture = ExtResource("1_dng4t")
+texture_region_size = Vector2i(256, 256)
+use_texture_padding = false
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_ku1xm"]
+tile_size = Vector2i(256, 256)
+sources/0 = SubResource("TileSetAtlasSource_mcgfo")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fn0w6"]
+size = Vector2(124.343, 127.875)
+
+[node name="CollisionTest" type="TileMap"]
+tile_set = SubResource("TileSet_ku1xm")
+format = 2
+layer_0/tile_data = PackedInt32Array(65536, 196608, 0, 0, 196608, 0, 1, 196608, 0, 2, 196608, 0, 3, 196608, 0, 65539, 196608, 0, 131075, 196608, 0, 131074, 196608, 0, 131073, 196608, 0, 65537, 196608, 0, 65538, 196608, 0, 131072, 196608, 0, -1, 196608, 0, 65535, 196608, 0, -65536, 196608, 0, -65535, 196608, 0, -65534, 196608, 0, 131071, 196608, 0, 196607, 196608, 0, -65533, 196608, 0, -65532, 196608, 0, 4, 196608, 0, 65540, 196608, 0, 131076, 196608, 0)
+script = ExtResource("2_xecnb")
+
+[node name="Player" parent="." groups=["Player"] instance=ExtResource("1_pbiu3")]
+
+[node name="wall" type="Area2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="wall"]
+position = Vector2(-153, 255.5)
+scale = Vector2(1.64063, 8.00781)
+texture = ExtResource("3_x17ti")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="wall"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wall/StaticBody2D"]
+position = Vector2(-150, 254)
+scale = Vector2(1.64063, 8.00781)
+shape = SubResource("RectangleShape2D_fn0w6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wall"]
+position = Vector2(-150, 254)
+scale = Vector2(1.64063, 8.00781)
+shape = SubResource("RectangleShape2D_fn0w6")
+
+[connection signal="body_entered" from="wall" to="." method="_on_area_2d_body_entered"]
