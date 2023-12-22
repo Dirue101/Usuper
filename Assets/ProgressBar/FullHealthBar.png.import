@@ -1,0 +1,18 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://qr0d5vtrjoay"
+path="res://.godot/imported/FullHealthBar.png-f2dd7335dca36745a65eb3a57ffccde1.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Assets/ProgressBar/FullHealthBar.png"
+dest_files=PackedStringArray("res://.godot/imported/FullHealthBar.png-f2dd7335dca36745a65eb3a57ffccde1.ctex")
+
+[params]
+
+dummy_value_ignore_me=0

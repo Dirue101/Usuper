@@ -1,0 +1,18 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://dqwhgby60j5dn"
+path="res://.godot/imported/HalfHealthBar.png-11bbde4772f2dcc3ca3dfd57d5da2018.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Assets/ProgressBar/HalfHealthBar.png"
+dest_files=PackedStringArray("res://.godot/imported/HalfHealthBar.png-11bbde4772f2dcc3ca3dfd57d5da2018.ctex")
+
+[params]
+
+dummy_value_ignore_me=0

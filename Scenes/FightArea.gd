@@ -1,7 +1,5 @@
-extends Node
-var zoom = Vector2(1,1)
-var infiniteMovement = true
-var combatModeToggled = false
+extends Area2D
+@onready var Player = get_node("/root/Map/Player")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -12,3 +10,6 @@ func _ready():
 func _process(delta):
 	pass
 
+
+func _on_area_shape_entered(area_rid, area, area_shape_index, local_shape_index):
+	print("Area entered")

@@ -1,0 +1,18 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://clpnjyytvvww2"
+path="res://.godot/imported/leftCoast.png-352ee3b8387ba44c70309ef3a7910bab.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Assets/TileMap Textures/leftCoast.png"
+dest_files=PackedStringArray("res://.godot/imported/leftCoast.png-352ee3b8387ba44c70309ef3a7910bab.ctex")
+
+[params]
+
+dummy_value_ignore_me=0

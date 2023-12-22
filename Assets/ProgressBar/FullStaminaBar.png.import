@@ -1,0 +1,18 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://dfq5aao0r3p7g"
+path="res://.godot/imported/FullStaminaBar.png-740e08c68a9a537c4ad4042bcfda0400.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Assets/ProgressBar/FullStaminaBar.png"
+dest_files=PackedStringArray("res://.godot/imported/FullStaminaBar.png-740e08c68a9a537c4ad4042bcfda0400.ctex")
+
+[params]
+
+dummy_value_ignore_me=0

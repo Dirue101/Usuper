@@ -1,0 +1,18 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://dscmk62dk2k62"
+path="res://.godot/imported/ProtoTextures2.png-574a8cc49e8e944f5b212c7ac9d29432.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Assets/TileMap Textures/ProtoTextures2.png"
+dest_files=PackedStringArray("res://.godot/imported/ProtoTextures2.png-574a8cc49e8e944f5b212c7ac9d29432.ctex")
+
+[params]
+
+dummy_value_ignore_me=0

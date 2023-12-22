@@ -1,0 +1,18 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://7j2bdfuo4jo0"
+path="res://.godot/imported/Test Paint Tile.png-33ae2a34142c53e7032302272528b993.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Assets/TileMap Textures/Test Paint Tile.png"
+dest_files=PackedStringArray("res://.godot/imported/Test Paint Tile.png-33ae2a34142c53e7032302272528b993.ctex")
+
+[params]
+
+dummy_value_ignore_me=0

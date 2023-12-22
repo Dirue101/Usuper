@@ -1,0 +1,18 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://c5qw8fd0x1ww5"
+path="res://.godot/imported/CharacterBox.png-654da4676335f525a1bf448cda463f6b.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Assets/CharacterBox.png"
+dest_files=PackedStringArray("res://.godot/imported/CharacterBox.png-654da4676335f525a1bf448cda463f6b.ctex")
+
+[params]
+
+dummy_value_ignore_me=0

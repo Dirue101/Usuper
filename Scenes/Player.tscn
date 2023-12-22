@@ -1,0 +1,195 @@
+[gd_scene load_steps=11 format=3 uid="uid://wq4gsfm6vxj4"]
+
+[ext_resource type="Script" path="res://Player.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://fmkapjpj6a4b" path="res://Scenes/hud.tscn" id="2"]
+[ext_resource type="Texture2D" uid="uid://bqdcdtrsmaoot" path="res://Assets/rightchad.png" id="4"]
+[ext_resource type="Script" path="res://Scenes/MovesLayer.gd" id="5"]
+[ext_resource type="Texture2D" uid="uid://c5qw8fd0x1ww5" path="res://Assets/CharacterBox.png" id="6"]
+[ext_resource type="Script" path="res://Scenes/Move1.gd" id="7"]
+
+[sub_resource type="RectangleShape2D" id="1"]
+size = Vector2(74, 114)
+
+[sub_resource type="Animation" id="2"]
+resource_name = "new_animation"
+
+[sub_resource type="AnimationLibrary" id="3"]
+_data = {
+"new_animation": SubResource("2")
+}
+
+[sub_resource type="SpriteFrames" id="4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4")
+}],
+"loop": true,
+"name": &"right",
+"speed": 5.0
+}]
+
+[node name="Player" type="Area2D"]
+position = Vector2(573, 324)
+disable_mode = 2
+collision_layer = 65535
+script = ExtResource("1")
+
+[node name="MovesUITrigger" type="Button" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -43.0
+offset_top = -61.0
+offset_right = 33.0
+offset_bottom = 55.0
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-5, -3)
+shape = SubResource("1")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)
+
+[node name="DetectCollison" type="RayCast2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("3")
+}
+
+[node name="HUD" parent="." instance=ExtResource("2")]
+
+[node name="fightUI" parent="HUD" index="5"]
+visible = false
+
+[node name="PlayerCamera" type="Camera2D" parent="."]
+
+[node name="PlayerSprites" type="AnimatedSprite2D" parent="."]
+position = Vector2(-6, 1)
+sprite_frames = SubResource("4")
+animation = &"right"
+
+[node name="MovesUI" type="CanvasLayer" parent="."]
+script = ExtResource("5")
+
+[node name="CharacterBox" type="Sprite2D" parent="MovesUI"]
+visible = false
+position = Vector2(568, 321)
+scale = Vector2(0.59375, 0.914062)
+texture = ExtResource("6")
+
+[node name="MoveList" type="CanvasLayer" parent="MovesUI"]
+visible = false
+
+[node name="MoveContainter" type="Sprite2D" parent="MovesUI/MoveList"]
+position = Vector2(733, 416)
+scale = Vector2(1.98438, 1.92188)
+texture = ExtResource("6")
+
+[node name="Move1" type="Sprite2D" parent="MovesUI/MoveList/MoveContainter"]
+position = Vector2(-31.75, -37)
+scale = Vector2(0.480469, 0.398438)
+texture = ExtResource("6")
+script = ExtResource("7")
+
+[node name="Move1Label" type="Label" parent="MovesUI/MoveList/MoveContainter/Move1"]
+offset_left = -61.0
+offset_top = -63.0
+offset_right = 62.0
+offset_bottom = 63.0
+text = "Punch"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Move1Button" type="Button" parent="MovesUI/MoveList/MoveContainter/Move1"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -61.0
+offset_top = -63.0
+offset_right = 62.0
+offset_bottom = 63.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Move2" type="Sprite2D" parent="MovesUI/MoveList/MoveContainter"]
+position = Vector2(30.5, -37)
+scale = Vector2(0.507813, 0.398438)
+texture = ExtResource("6")
+
+[node name="Move2Label" type="Label" parent="MovesUI/MoveList/MoveContainter/Move2"]
+offset_left = -62.0
+offset_top = -63.0
+offset_right = 62.0
+offset_bottom = 63.0
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Move2Button" type="Button" parent="MovesUI/MoveList/MoveContainter/Move2"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -62.0
+offset_top = -63.0
+offset_right = 62.0
+offset_bottom = 63.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Move3" type="Sprite2D" parent="MovesUI/MoveList/MoveContainter"]
+position = Vector2(-31.625, 13.5)
+scale = Vector2(0.478515, 0.398438)
+texture = ExtResource("6")
+
+[node name="Move3Label" type="Label" parent="MovesUI/MoveList/MoveContainter/Move3"]
+offset_left = -61.0
+offset_top = -61.0
+offset_right = 62.0
+offset_bottom = 61.0
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Move3Button" type="Button" parent="MovesUI/MoveList/MoveContainter/Move3"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -61.0
+offset_top = -64.0
+offset_right = 62.0
+offset_bottom = 64.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Move4" type="Sprite2D" parent="MovesUI/MoveList/MoveContainter"]
+position = Vector2(30.625, 13.25)
+scale = Vector2(0.509766, 0.402344)
+texture = ExtResource("6")
+
+[node name="Move4Label" type="Label" parent="MovesUI/MoveList/MoveContainter/Move4"]
+offset_left = -62.0
+offset_top = -63.0
+offset_right = 62.0
+offset_bottom = 62.0
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Move4Button" type="Button" parent="MovesUI/MoveList/MoveContainter/Move4"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -62.0
+offset_top = -63.0
+offset_right = 62.0
+offset_bottom = 64.0
+metadata/_edit_use_anchors_ = true
+
+[node name="MovesButton" type="Button" parent="MovesUI"]
+offset_left = 607.0
+offset_top = 262.0
+offset_right = 666.0
+offset_bottom = 293.0
+text = "Moves"
+
+[node name="InventoryButton" type="Button" parent="MovesUI"]
+offset_left = 606.0
+offset_top = 293.0
+offset_right = 689.0
+offset_bottom = 324.0
+text = "Inventory"
+
+[connection signal="pressed" from="MovesUITrigger" to="MovesUI" method="_on_button_pressed" flags=18]
+[connection signal="pressed" from="HUD/fightUI/EndTurn" to="." method="endTurn"]
+[connection signal="pressed" from="MovesUI/MovesButton" to="MovesUI" method="_on_moves_button_pressed" flags=18]
+
+[editable path="HUD"]

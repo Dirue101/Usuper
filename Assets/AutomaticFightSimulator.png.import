@@ -1,0 +1,18 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://ds4xtnb0hn0w"
+path="res://.godot/imported/AutomaticFightSimulator.png-1ee57f4388301c35028cdb875f758616.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Assets/AutomaticFightSimulator.png"
+dest_files=PackedStringArray("res://.godot/imported/AutomaticFightSimulator.png-1ee57f4388301c35028cdb875f758616.ctex")
+
+[params]
+
+dummy_value_ignore_me=0

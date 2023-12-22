@@ -1,0 +1,15 @@
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://mh1nkucwstug"
+path="res://.godot/imported/SuperBlackMarker.ttf-9746d6a7857c3574463d429bc89785cc.fontdata"
+
+[deps]
+
+source_file="res://Assets/Fonts/SuperBlackMarker.ttf"
+dest_files=PackedStringArray("res://.godot/imported/SuperBlackMarker.ttf-9746d6a7857c3574463d429bc89785cc.fontdata")
+
+[params]
+
+dummy_value_ignore_me=0
